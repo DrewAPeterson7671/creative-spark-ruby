@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @Article = Article.find(params[:id])
   end
 
   # GET /articles/new
@@ -21,6 +22,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    @Article = Article.find(params[:id])
+    render :edit
   end
 
   # POST /articles

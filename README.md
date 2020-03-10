@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* config/routes.rb need to add destroy and index to resources https://www.learnhowtoprogram.com/ruby-and-rails/rails-with-active-record/rails-routes
+
+*
