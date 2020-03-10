@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @Article = Article.find(params[:id])
+    render :show
   end
 
   # GET /articles/new
@@ -45,6 +46,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
+    @article = Article.find(params[:id])
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
@@ -74,6 +76,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :author, :content, :date)
+      params.require(:article).permit(:title, :author, :content)
     end
 end
