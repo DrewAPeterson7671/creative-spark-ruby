@@ -21,7 +21,7 @@
   <% @article.comments.each do |comment| %>
     <ul>
       <li>
-        <%= link_to comment.user, article_comment_path(@article, comment) %>
+        <%= link_to '"' + comment.remark + '"' + ' by ' + comment.user, article_comment_path(@article, comment) %>
       </li>
     </ul>
   <% end %>
