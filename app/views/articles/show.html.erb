@@ -21,7 +21,7 @@
   <% @article.comments.each do |comment| %>
     <ul>
       <li>
-        <%= link_to comment.comment, article_comment_path(@article, comment) %>
+        <%= link_to comment.user, article_comment_path(@article, comment) %>
       </li>
     </ul>
   <% end %>
@@ -33,3 +33,4 @@
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %> |
+<%= link_to 'Add A Comment', new_article_comment_path(@article) %> |
