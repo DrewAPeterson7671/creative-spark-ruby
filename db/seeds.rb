@@ -12,15 +12,16 @@ Comment.destroy_all
 
 50.times do |index|
   articles = []
-  articles.push(Article.create!(title: Faker::Book.title, author: Faker::TvShows::RickAndMorty.character, content: Faker::Lorem.paragraphs(number: 500)))
+  articles.push(Article.create!(title: Faker::Book.title, author: Faker::TvShows::RickAndMorty.character, content: Faker::Lorem.paragraphs(number: 500).join))
   articles
   rand(3..15).times do |comment|
     articles.each do |article|
     Comment.create! :user => Faker::TvShows::Simpsons.character,
-                    :remark => Faker::Lorem.words(number: rand(3..50)),
+                    :remark => Faker::Lorem.paragraph(sentence_count: rand(1..10)),
                     :article_id => article.id
     end
   end
 end
 
 p "Created #{Article.count} articles"
+# p "Article #{Article.first.content}"
