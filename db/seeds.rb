@@ -12,13 +12,12 @@ Comment.destroy_all
 
 50.times do |index|
   articles = []
-  articles.push(Article.create!(name: Faker::Food.fruits, price: Faker::Number.decimal(l_digits: 2), country: Faker::TvShows::RickAndMorty.location))
+  articles.push(Article.create!(title: Faker::Book.title, author: Faker::TvShows::RickAndMorty.character, content: Faker::Lorem.characters(number: 500)))
   articles
   50.times do |comment|
     articles.each do |article|
-    Comment.create! :author => Faker::TvShows::Simpsons.character,
-                    :content_body => Faker::Lorem.characters(number: 50),
-                    :rating => rand(1..5),
+    Comment.create! :user => Faker::TvShows::Simpsons.character,
+                    :remark => Faker::Lorem.characters(number: 50),
                     :article_id => article.id
     end
   end
