@@ -1,6 +1,9 @@
 <h1>Editing Article</h1>
 
-<%= render 'form', article: @article %>
+<% if current_user && current_user.admin %>
+  <h3>Admin Only</h3>
+  <%= render 'form', article: @article %>
+<% end %>
 
 <%= link_to 'Show', @article %> |
 <%= link_to 'Back', articles_path %>

@@ -30,7 +30,8 @@
 <% end %>
 
 
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
+<% if current_user && current_user.admin %>
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+<% end %>
 <%= link_to 'Back', articles_path %> |
 <%= link_to 'Add A Comment', new_article_comment_path(@article) %>

@@ -1,7 +1,11 @@
 <h1> Sign up</h1>
 <%= form_for @user do |f| %>
+  <%= f.label "User Name" %>
+  <%= f.text_field :username %>
   <%= f.label "Email" %>
   <%= f.text_field :email %>
+  <%= f.label "Admin?", name: 'admin_check', id: 'admin_check' %>
+  <%= f.check_box:admin %>
   <%= f.label "Password" %>
   <%= f.password_field :password %>
   <%= f.label :password_confirmation %>
