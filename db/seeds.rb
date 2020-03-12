@@ -22,6 +22,14 @@ Comment.destroy_all
     end
   end
 end
+50.times do |index|
+  users = []
+  users.push(User.create!(email: Faker::Internet.email, username: Faker::TvShows::RickAndMorty.character, admin: false))
+  users
+end
+
+
+
 
 p "Created #{Article.count} articles"
 # p "Article #{Article.first.content}"

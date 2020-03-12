@@ -24,7 +24,17 @@ _Application to post articles and comments including CRUD functionality with aut
 
 ## Known Bugs
 
-_There are no known bugs at this time._
+_Need to automate tying user id to comments (db change, view change, controller change_
+_remove user column from comments, edit views, edit controllers and edit seed to add users_
+_Need to make only the author of a comment to edit a comment_
+_Need to add delete to auther privileges (currently only admin)_
+_Need to add comment dates_
+_Need active storage for photos and media_
+_Need pages for contact, channels for existing content series links_
+_deleting comments throws error_
+
+
+
 
 ## Support and contact details
 
