@@ -1,26 +1,43 @@
-# README
+# _Creative Spark_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _Blog for creative musings of a particular artist, 3/11/2020_
 
-Things you may want to cover:
+#### By _**Drew Peterson**_
 
-* Ruby version
+## Description
 
-* System dependencies
+_Application to post articles and comments including CRUD functionality with authentication and admin permissions._
 
-* Configuration
+## Setup/Installation Requirements
 
-* Database creation
+* Ensure that you have the correct version of Ruby and Postgres installed
+* Clone the project locally from github.
+* Install Bundler if you do not already have it by running gem install bundler in the terminal.
+* Run bundle install to manage gems; if you make additional changes to the Gemfile, you will need to run this command again.
+* DATABASE INSTRUCTIONS - from the root directory of this project, run these commands:
+*         rake db:create
+*         rake db:migrate
+*         rake db:test:prepare
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Known Bugs
 
-* config/routes.rb need to add destroy and index to resources https://www.learnhowtoprogram.com/ruby-and-rails/rails-with-active-record/rails-routes
+_There are no known bugs at this time._
 
-* work on comments - gem issue  
+## Support and contact details
+
+_Please contact me directly via email at drew.a.peterson@hotmail.com with any bug reports, questions, critique, or for any reason._
+
+## Technologies Used
+
+_Ruby 2.5.1, Postgres SQL, and PG, Pry, Bundler, Sinatra, rspec_
+
+### License
+
+*GPL*
+
+
+
+* Copyright (c) 2020 **_Drew Peterson_**
