@@ -12,5 +12,8 @@
 
 <% if current_user && current_user.admin %>
   <%= link_to 'Edit', edit_article_comment_path(@article, @comment) %> |
-<% end %>  
+<% end %>
+<% if current_user && current_user.admin %>
+<%= link_to 'Destroy', comment , method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %>
 <%= link_to 'Back', articles_path %>
